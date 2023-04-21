@@ -226,10 +226,10 @@ pub async fn init_client(uri: Uri, req_header: HeaderMap, Query(params): Query<H
         let _ = write!(client_opts, r#" --interval {interval}"#);
     }
 
-    let ip_source = params.get("ip-source").unwrap_or(&invalid);
-    if !ip_source.is_empty() {
-        let _ = write!(client_opts, r#" --ip-source "{ip_source}""#);
-    }
+    //let ip_source = params.get("ip-source").unwrap_or(&invalid);
+    //if !ip_source.is_empty() {
+    //    let _ = write!(client_opts, r#" --ip-source "{ip_source}""#);
+    //}
 
     jinja::render_template(
         KIND,
